@@ -39,9 +39,9 @@ public class Movement : MonoBehaviour
             rb.AddForce(0, 0, -sidewaysForce * Time.deltaTime);
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && transform.position.y == 1f)
         {
-            rb.AddForce(0, upsideForce*Time.deltaTime, 0);
+            rb.AddForce(0, upsideForce, 0);
         }
 
         if (Input.GetKey(KeyCode.LeftShift))
